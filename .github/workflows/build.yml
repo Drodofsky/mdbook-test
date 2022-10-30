@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: extractions/setup-crate@v1
         with:
-        owner: rust-lang
-        name: mdBook
+          owner: rust-lang
+          name: mdBook
       - name: Build
         run: mdbook build
       # share between different jobs
