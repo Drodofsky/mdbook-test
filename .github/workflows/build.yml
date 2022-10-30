@@ -9,6 +9,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: extractions/setup-crate@v1
         with:
           owner: rust-lang
