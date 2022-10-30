@@ -1,0 +1,22 @@
+name: Mdbook build
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: extractions/setup-crate@v1
+        with:
+        owner: rust-lang
+        name: mdBook
+      - name: Build
+        run: mdbook build
+      # share between different jobs
+      - uses: actions/upload-artifact@v3
+        with:
+          name: book
+          path: book/
