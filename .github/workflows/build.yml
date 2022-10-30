@@ -14,7 +14,7 @@ jobs:
           owner: rust-lang
           name: mdBook
       - name: Build
-        run: mdbook build
+        run: cd && mdbook build
       # share between different jobs
       - uses: actions/upload-artifact@v3
         with:
